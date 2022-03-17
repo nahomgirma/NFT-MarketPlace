@@ -6,7 +6,7 @@ const privateKey = fs.readFileSync(".secret").toString().trim()
 const infuraId = "37cbac69f35247a6b09b5c7712f52d30";
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  //defaultNetwork: "hardhat",
   networks: {
     hardhat: {
       chainId: 1337
@@ -15,23 +15,23 @@ module.exports = {
     mumbai: {
       // Infura
       url: `https://polygon-mumbai.infura.io/v3/${infuraId}`,
-      url: "https://rpc-mumbai.matic.today",
+     // url: "https://rpc-mumbai.matic.today",
       accounts: [privateKey]
     },
-    matic: {
+    mainnet: {
       // Infura
       url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
-      url: "https://rpc-mainnet.maticvigil.com",
+      //url: "https://rpc-mainnet.maticvigil.com",
       accounts: [privateKey]
     }
     
   },
   solidity: {
-    version: "0.8.4",
+    version: "0.8.3",
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200
+        runs: 200 
       }
     }
   }
