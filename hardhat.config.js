@@ -1,9 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
-const privateKey = fs.readFileSync(".secret").toString().trim() 
+const privateKey = fs.readFileSync(".secret").toString().trim();
 //|| "01234567890123456789";
-//const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
-const infuraId = "37cbac69f35247a6b09b5c7712f52d30";
+const infuraId = fs.readFileSync(".infuraid").toString().trim();
+//const infuraId = "37cbac69f35247a6b09b5c7712f52d30";
 
 module.exports = {
   //defaultNetwork: "hardhat",
